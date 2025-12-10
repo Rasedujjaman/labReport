@@ -22,7 +22,7 @@
 % Logo framed nicely
 \begin{tikzpicture}
 \node[draw, thick, rounded corners, fill=gray!10] 
-{\includegraphics[width=4cm]{Figures/SUST_Logo.png}};
+{\includegraphics[width=4cm]{Figures/logo/SUST_Logo.png}};
 \end{tikzpicture}
 
 \vspace{4cm}
@@ -31,14 +31,17 @@
 \begin{minipage}[t]{0.48\textwidth}
 \textbf{Submitted by:}\\[0.3cm]
 \nameOfStudents\\
-Department: \deptOfStudent\\
+Dept. of ~\deptOfStudent, \institutionNameShort\\
+Regi. No. : {\registrationNumberOfStudent}\\
 Session: \sessionOfStudent
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
 \textbf{Submitted to:}\\[0.3cm]
 \courseInstructor\\
-Department of \courseOfferingDeptShort, \institutionNameShort
+\designationOfInstructor\\
+Dept. of~\courseOfferingDeptShort,~\institutionNameShort\\
+\officeAddressOfInstructor
 \end{minipage}
 \end{tcolorbox}
 
@@ -48,7 +51,7 @@ Department of \courseOfferingDeptShort, \institutionNameShort
 \begin{center}
 % Course Offering Department
 {\large \courseOfferingDept}\\
-\large \textbf{Submission Date:} \dateOfReportSubmission
+\large Report Submission Date:~\textbf{\dateOfReportSubmission}
 \end{center}
 
 \end{center}

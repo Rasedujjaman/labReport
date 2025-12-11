@@ -1,0 +1,100 @@
+\section*{Theory}
+\addcontentsline{toc}{section}{Theory}
+	According to the Superposition Theorem:
+	\begin{quote}
+		In any linear bilateral network with multiple independent sources, the current through or voltage across any element is equal to the algebraic sum of the currents or voltages produced by each source acting independently.
+	\end{quote}
+	
+	While considering one voltage source:
+	\begin{itemize}
+		\item All other voltage sources are replaced by short circuits.
+		\item All other current sources are replaced by open circuits.
+	\end{itemize}
+	
+	This principle is valid only for linear circuits and cannot be directly applied to power calculations.
+	
+
+
+\section*{Circuit Connection}
+	    The circuit used in this experiment consists of two independent voltage sources and three resistors.
+	\subsection*{Circuit 1: Complete Circuit (Both Sources Active)}
+	\begin{figure}[h]
+		\centering
+		\begin{circuitikz}[american, scale=0.9]
+			% Voltage sources (both active)
+			\draw (0,0) to[V, v=$10\mathrm{V}$, invert] (0,3) -- (0,3);
+			\draw (8,0) to[V, v=$5\mathrm{V}$, invert] (8,3) -- (8,3);
+			
+			% Resistors (all three present)
+			\draw (0,3) to[R, l=$3.3\mathrm{k}\Omega$] (4,3) to[R, l=$1\mathrm{k}\Omega$] (8,3);
+			\draw (4,3) to[R, l=$4.7\mathrm{k}\Omega$] (4,0);
+			
+			% Ground and connections
+			\draw (0,0) -- (8,0);
+			\draw (4,0) node[ground]{};
+			
+			% Labels
+			\node at (2.1,2.3) {R1};
+			\node at (6,2.3) {R2};
+			\node at (3.4,1.5) {R3};
+			\node at (0.9,1.5) {V1};
+			\node at (8.9,1.5) {V2};
+		\end{circuitikz}
+		\caption{Complete circuit with both voltage sources active}
+	\end{figure}
+	
+	\subsection*{Circuit 2: V1 Active, V2 Short Circuit}
+	\begin{figure}[h]
+		\centering
+		\begin{circuitikz}[american, scale=0.9]
+			% Voltage source V1 active
+			\draw (0,0) to[V, v=$10\mathrm{V}$, invert] (0,3) -- (0,3);
+			
+			% V2 replaced by short circuit (wire)
+			\draw (8,0) -- (8,3) -- (8,3);
+			
+			% Resistors (all three present)
+			\draw (0,3) to[R, l=$3.3\mathrm{k}\Omega$] (4,3) to[R, l=$1\mathrm{k}\Omega$] (8,3);
+			\draw (4,3) to[R, l=$4.7\mathrm{k}\Omega$] (4,0);
+			
+			% Ground and connections
+			\draw (0,0) -- (8,0);
+			\draw (4,0) node[ground]{};
+			
+			% Labels
+			\node at (2.1,2.3) {R1};
+			\node at (6,2.3) {R2};
+			\node at (3.4,1.5) {R3};
+			\node at (0.9,1.5) {V1};
+			\node at (8,1.5) {\textbf{Short}};
+		\end{circuitikz}
+		\caption{Circuit with V1 active and V2 replaced by short circuit}
+	\end{figure}
+	
+	\subsection*{Circuit 3: V2 Active, V1 Short Circuit}
+	\begin{figure}[h]
+		\centering
+		\begin{circuitikz}[american, scale=0.9]
+			% V1 replaced by short circuit (wire)
+			\draw (0,0) -- (0,3) -- (0,3);
+			
+			% Voltage source V2 active
+			\draw (8,0) to[V, v=$5\mathrm{V}$, invert] (8,3) -- (8,3);
+			
+			% Resistors (all three present)
+			\draw (0,3) to[R, l=$3.3\mathrm{k}\Omega$] (4,3) to[R, l=$1\mathrm{k}\Omega$] (8,3);
+			\draw (4,3) to[R, l=$4.7\mathrm{k}\Omega$] (4,0);
+			
+			% Ground and connections
+			\draw (0,0) -- (8,0);
+			\draw (4,0) node[ground]{};
+			
+			% Labels
+			\node at (2.1,2.3) {R1};
+			\node at (6,2.3) {R2};
+			\node at (3.4,1.5) {R3};
+			\node at (0,1.5) {\textbf{Short}};
+			\node at (8.9,1.5) {V2};
+		\end{circuitikz}
+		\caption{Circuit with V2 active and V1 replaced by short circuit}
+	\end{figure}

@@ -1,0 +1,40 @@
+\section*{Data Collection}
+\addcontentsline{toc}{section}{Data Collection}
+	
+	
+	
+	\begin{center}
+		\begin{tabular}{l c}
+			\toprule
+			\textbf{Condition} & \textbf{Current through $R_2$ (mA)} \\
+			\midrule
+			$V_1$ and $V_2$ active &  \\
+			Only $V_1$ active &  \\
+			Only $V_2$ active &  \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	
+	\section*{Calculations}
+	
+	Given:
+	\[
+	R_1 = 3.3\,k\Omega,\quad R_2 = 1\,k\Omega,\quad R_3 = 4.7\,k\Omega
+	\]
+	\[
+	V_1 = 10\,V,\quad V_2 = 5\,V
+	\]
+	
+	\subsection*{Case 1: Only $V_1$ Active}
+	$V_2$ is replaced by a short circuit.  
+	Using nodal analysis, the current through $R_2$ is calculated as $I_{R_2(V_1)}$.
+	
+	\subsection*{Case 2: Only $V_2$ Active}
+	$V_1$ is replaced by a short circuit.  
+	The current through $R_2$ is calculated as $I_{R_2(V_2)}$.
+	
+	\subsection*{Case 3: Both Sources Active}
+	The total current through $R_2$ is:
+	\[
+	I_{R_2} = I_{R_2(V_1)} + I_{R_2(V_2)}
+	\]

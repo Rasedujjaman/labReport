@@ -11,7 +11,7 @@
 \newcommand{\courseOfferingDeptShort}{EEE}
 \newcommand{\courseInstructor}{Name of course Teacher}
 \newcommand{\designationOfInstructor}{Associate Professor}
-\newcommand{\officeAddressOfInstructor}{Room No. 519, IICT, SUST}
+\newcommand{\officeAddressOfInstructor}{Room No. 421, IICT, SUST}
 
 
 %% Laboratory experiment related variables
@@ -34,32 +34,52 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+    
+    % The title page
     \thispagestyle{empty}
-	\input{setupFiles/titlepage.tex}			% The title page
-	\thispagestyle{empty}
-    \input{setupFiles/declaration.tex} 	% The decleration page
+	\input{setupFiles/titlepage.tex}			
+	
+	% The decleration page
+	\pagenumbering{roman}
+    \input{setupFiles/declaration.tex} 	
+	
+	% The table of contents
+	\tableofcontents
+	\cleardoublepage
+    \listoffigures
+    \cleardoublepage	
+	
+	\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\textit{Experiment numberm: \experimentNumber}\\
+\vspace{1cm}
+\textit{\textbf{Name of the experiment:} \experimentName}
+\end{center}
+\vspace{1cm}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Include all the tex files
 
+\input{TexFiles/objective}
+\input{TexFiles/introduction}
+\input{TexFiles/theory}
+\input{TexFiles/apparatus}
+\input{TexFiles/dataCollection}
+\input{TexFiles/resultAnalysis}
+\input{TexFiles/discussionAndConclusion}
+\input{TexFiles/references}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\input{tex/introduction}
-	\input{tex/theoryAndExp}
-	\input{tex/discussionAndConclusion}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% The bibliography 
- %   \newpage
-%	\printbibliography	
-
-
-
+	
+	
+	
+	
+	
+    
+    
 
 \end{document}

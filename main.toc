@@ -1,0 +1,8 @@
+\contentsline {section}{Objective}{1}{section*.3}%
+\contentsline {section}{Introduction}{1}{section*.4}%
+\contentsline {section}{Theory}{1}{section*.5}%
+\contentsline {section}{Apparatus and components}{2}{section*.13}%
+\contentsline {section}{Data Collection}{2}{section*.14}%
+\contentsline {section}{Result Analysis}{3}{section*.19}%
+\contentsline {section}{Discussion and Conclusion}{3}{section*.20}%
+\contentsline {section}{References}{4}{section*.21}%
